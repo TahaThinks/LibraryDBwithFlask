@@ -8,7 +8,9 @@
     <h1>My Library</h1>
     <ul>
       {% if books: %}
-        <li>There is book</li>
+        {% for book in books: %}
+        <li>{{book.title}} - {{book.author}} - {{book.rating}}</li>
+        {% endfor %}
       {% else: %}
         <p>There is currently no books</p>
       {% endif %}
