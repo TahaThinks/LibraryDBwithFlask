@@ -7,7 +7,11 @@
   <body>
     <h1>My Library</h1>
     <ul>
-      <li></li>
+      {% if books: %}
+        <li>There is book</li>
+      {% else: %}
+        <p>There is currently no books</p>
+      {% endif %}
     </ul>
 
     <a href="">Add New Book</a>
